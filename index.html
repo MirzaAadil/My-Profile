@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mirza Aadil Ali Baig | Interview Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="animated-bg" aria-hidden="true">
+      <span class="blob blob-1"></span>
+      <span class="blob blob-2"></span>
+      <span class="blob blob-3"></span>
+    </div>
+
+    <header class="topbar">
+      <a class="brand" href="#home">Mirza<span>Portfolio</span></a>
+      <nav class="main-nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="themeToggle" class="ghost-btn" aria-label="Toggle dark mode">🌙</button>
+    </header>
+
+    <main>
+      <section id="home" class="page">
+        <div class="hero-grid">
+          <article class="hero-card reveal pop-up">
+            <p class="pill">Interview Portfolio 2026</p>
+            <h1 id="name"></h1>
+            <p id="role" class="hero-role"></p>
+            <p id="tagline" class="hero-tagline"></p>
+
+            <div class="hero-actions">
+              <a id="linkedinLink" class="btn" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a id="emailLink" class="btn secondary" href="#">Email</a>
+              <a id="phoneLink" class="btn tertiary" href="#">Call</a>
+            </div>
+          </article>
+
+          <article class="hero-card reveal slide-right">
+            <h2>Quick Interview Snapshot</h2>
+            <ul id="highlights" class="list"></ul>
+          </article>
+        </div>
+
+        <div class="stat-grid" id="stats"></div>
+      </section>
+
+      <section id="about" class="page split">
+        <article class="panel reveal slide-left">
+          <h2>Professional Summary</h2>
+          <p id="summary"></p>
+          <div id="focusAreas" class="chips mt"></div>
+        </article>
+
+        <article class="panel reveal slide-right">
+          <h2>Education Journey</h2>
+          <div id="education" class="timeline"></div>
+        </article>
+      </section>
+
+      <section id="skills" class="page">
+        <article class="section-wrap reveal pop-up">
+          <h2>Technical Skill Universe</h2>
+          <p class="section-subtitle">Every section below is filled to present your profile clearly during interviews.</p>
+          <div id="skillsContainer" class="skills-grid"></div>
+        </article>
+      </section>
+
+      <section id="experience" class="page">
+        <article class="section-wrap reveal fade-in-up">
+          <h2>Internship Experience</h2>
+          <div id="experienceContainer" class="experience-grid"></div>
+        </article>
+      </section>
+
+      <section id="projects" class="page">
+        <article class="section-wrap reveal fade-in-up">
+          <h2>Project Showcase</h2>
+          <div id="projectsContainer" class="project-grid"></div>
+        </article>
+      </section>
+
+      <section id="achievements" class="page split">
+        <article class="panel reveal slide-left">
+          <h2>Certifications</h2>
+          <ul id="certifications" class="list"></ul>
+        </article>
+
+        <article class="panel reveal slide-right">
+          <h2>Leadership & Co-Curricular</h2>
+          <ul id="activities" class="list"></ul>
+        </article>
+      </section>
+
+      <section id="contact" class="page contact-page">
+        <article class="contact-card reveal pop-up">
+          <h2>Let’s Connect</h2>
+          <p>Open to internships, collaborations, and interview opportunities in Software / AI roles.</p>
+          <div id="contactInfo" class="contact-grid"></div>
+
+          <h3>Soft Skills</h3>
+          <div class="chips" id="softSkills"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
