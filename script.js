@@ -16,6 +16,13 @@ const profile = {
     { value: '3+', label: 'AI/ML Projects' },
     { value: '2022-26', label: 'Engineering Timeline' }
   ],
+  highlights: [
+    'Built real-time object detection + counting system during ITC internship.',
+    'Strong focus on practical AI execution with Python + OpenCV + YOLOv8.',
+    'Led and collaborated in campus-level and national-level innovation activities.',
+    'Comfortable explaining technical projects clearly in interview settings.'
+  ],
+  focusAreas: ['Computer Vision', 'Object Detection', 'Python Development', 'NLP Basics', 'AI Analytics'],
   education: [
     {
       title: 'Bachelor of Technology in Computer Science Engineering',
@@ -59,18 +66,18 @@ const profile = {
   projects: [
     {
       title: 'Object Detection Model',
-      context: 'ITC PSPD internship',
+      context: 'ITC PSPD Internship',
       description:
         'Developed and validated a practical object detection model for real-time monitoring use cases.'
     },
     {
       title: 'AI Analytic Dashboard',
-      context: 'Personal/Academic project',
-      description: 'Created a dashboard for data visualization and insights communication.'
+      context: 'Academic Project',
+      description: 'Created a dashboard for data visualization and insight communication.'
     },
     {
       title: 'Language Translator',
-      context: 'NLP-based project',
+      context: 'NLP-Based Project',
       description: 'Built a language translator prototype using natural language processing fundamentals.'
     }
   ],
@@ -91,6 +98,8 @@ const profile = {
 
 const byId = (id) => document.getElementById(id);
 
+document.documentElement.classList.add('js');
+
 function renderHero() {
   byId('name').textContent = profile.name;
   byId('role').textContent = profile.role;
@@ -102,15 +111,18 @@ function renderHero() {
   byId('phoneLink').href = `tel:${profile.contact.phone}`;
 
   byId('stats').innerHTML = profile.stats
-    .map((stat) => `<div class="stat"><strong>${stat.value}</strong><span>${stat.label}</span></div>`)
+    .map((stat) => `<div class="stat reveal pop-up"><strong>${stat.value}</strong><span>${stat.label}</span></div>`)
     .join('');
+
+  byId('highlights').innerHTML = profile.highlights.map((item) => `<li>${item}</li>`).join('');
+  byId('focusAreas').innerHTML = profile.focusAreas.map((item) => `<span>${item}</span>`).join('');
 }
 
 function renderEducation() {
   byId('education').innerHTML = profile.education
     .map(
       (item) => `
-      <div class="item">
+      <div class="item reveal fade-in-up">
         <div class="item-head">
           <h3>${item.title}</h3>
           <span class="meta">${item.period}</span>
@@ -181,7 +193,7 @@ function renderLists() {
     </a>
     <a class="contact-tile" href="${profile.contact.linkedin}" target="_blank" rel="noreferrer">
       <span>LinkedIn</span>
-      <strong>mirza-aadil</strong>
+      <strong>linkedin.com/in/mirza-aadil</strong>
     </a>
   `;
 }
@@ -215,7 +227,7 @@ function setupRevealAnimations() {
         }
       });
     },
-    { threshold: 0.14 }
+    { threshold: 0.12 }
   );
 
   document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
